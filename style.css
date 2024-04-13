@@ -1,5 +1,409 @@
-*{
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1.125rem;
+    font-family: "Open Sans", sans-serif;
+    color: hsl(192, 100%, 9%);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5rem;
+}
+
+nav button {
+    padding: 0.5rem 3rem;
+    color: hsl(322, 100%, 66%);
+    border: 1px solid hsl(322, 100%, 66%);
+    border-radius: 2rem;
+    background: transparent;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+}
+
+nav button:hover {
+    color: hsl(321, 100%, 78%);
+    border: 1px solid hsl(321, 100%, 78%);
+}
+
+header {
+    max-width: 1100px;
+    text-align: center;
+    margin: 7rem auto;
+}
+
+.intro h1 {
+    font-size: 2.85rem;
+}
+
+.intro p {
+    max-width: 550px;
+    margin: 0 auto 2rem auto;
+}
+
+.GSFF-btn {
+    color: white;
+    background: hsl(322, 100%, 66%);
+    padding: 1.4rem 6rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.GSFF-btn:hover {
+    background: hsl(321, 100%, 78%);
+}
+
+.intro img {
+    margin: 5rem auto;
+    width: 100%;
+    height: 100%;
+}
+
+.count {
+    margin: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.count img {
+    float: left;
+}
+
+.count h1 {
+    font-size: 4.6rem;
+    margin-bottom: 0.5rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+.count p {
+    opacity: 0.6;
+}
+
+.column {
+    margin: 5rem auto;
+}
+
+.pattern-top-desktop,
+.pattern-bottom-desktop {
+    display: block;
+    width: 100%;
+}
+
+.pattern-top-mobile,
+.pattern-bottom-mobile {
+    display: none;
+}
+
+.column__text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    padding: 5rem;
+}
+
+.first,
+.third {
+    background: hsl(207, 100%, 98%);
+}
+
+.column__text img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.first img,
+.third img {
+    order: 2;
+}
+
+.first section,
+.third section {
+    order: 1;
+}
+
+.column__text h2 {
+    font-size: 2.5rem;
+}
+
+.community {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    margin: 10rem auto;
+}
+
+.community h2 {
+    font-size: 2rem;
+}
+
+.footer {
+    padding: 5rem;
+    background: hsl(192, 100%, 9%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about,
+.sign-in section {
+    max-width: 420px;
+    margin: 0 1rem;
+}
+
+#footer-logo {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(125deg) brightness(103%) contrast(103%);
+    margin-bottom: 1.5rem;
+}
+
+.phone,
+.email {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem auto;
+}
+
+.email a {
+    color: white;
+    text-decoration: none;
+}
+
+.email a:hover {
+    color: rgb(52, 204, 250);
+    text-decoration: underline;
+}
+
+.media-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin: 3rem 0 1rem 0;
+}
+
+.media-icons i {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.media-icons i:hover {
+    color: rgb(52, 204, 250);
+}
+
+.sign-in h3 {
+    font-size: 1.8rem;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+}
+
+.sign-in form {
+    display: grid;
+    grid-template-columns: minmax(auto, 400px) auto;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+}
+
+.infield input {
+    width: 100%;
+    height: 3rem;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    padding-left: 1rem;
+}
+
+.infield #error {
+    color: hsl(0, 100%, 63%);
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+    display: none;
+}
+
+.sign-in form button {
+    color: white;
+    background: hsl(322, 100%, 66%);
+    height: 3rem;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 3rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.sign-in form button:hover {
+    background: hsl(321, 100%, 78%);
+}
+
+@media (max-width: 769px) {
+    body {
+        font-size: 1rem;
+    }
+
+    nav {
+        padding: 3rem;
+    }
+
+    #nav-logo {
+        max-width: 10rem;
+    }
+
+    nav button {
+        padding: 0.4rem 1.2rem;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro p {
+        margin: 0 auto 2rem auto;
+    }
+
+    .GSFF-btn {
+        padding: 1rem 3rem;
+    }
+
+    .intro img {
+        padding: 0 3rem;
+    }
+
+    .count {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .count section {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .column__text {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 5rem 2rem;
+    }
+
+    .first img,
+    .third img {
+        order: 1;
+    }
+
+    .first section,
+    .third section {
+        order: 2;
+    }
+
+    .column__text h2 {
+        font-size: 1.7rem;
+    }
+
+    .community h2 {
+        font-size: 1.1rem;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        gap: 5rem;
+        padding: 5rem 3rem;
+    }
+
+    .about,
+    .sign-in section {
+        margin: 0;
+    }
+
+    #footer-logo {
+        max-width: 15rem;
+        margin-bottom: 2rem;
+    }
+
+    .phone,
+    .email {
+        margin: 1.5rem auto;
+    }
+
+    .media-icons a i {
+        font-size: 2rem;
+    }
+
+    .sign-in form {
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: end;
+        gap: 1rem;
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+
+    .sign-in form .infield {
+        width: 100%;
+    }
+
+    .infield input {
+        width: 100%;
+    }
+
+    .infield #error {
+        text-align: right;
+    }
+
+    .sign-in .sign-in form button {
+        width: max-content;
+    }
+}
+
+@media (max-width: 426px) {
+    nav {
+        padding: 3rem 2rem;
+    }
+
+    #nav-logo {
+        max-width: 7rem;
+    }
+
+    .intro p {
+        margin: 0 2rem 2rem 2rem;
+    }
+
+    .count {
+        margin: 0 2rem;
+    }
+
+    .pattern-top-desktop,
+    .pattern-bottom-desktop {
+        display: none;
+    }
+
+    .pattern-top-mobile,
+    .pattern-bottom-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    #footer-logo {
+        max-width: 12rem;
+    }
 }
